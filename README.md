@@ -2,7 +2,7 @@
 
 # Luxvilla Application
 
-The Real Estate Application is a full-stack web platform designed for listing and selling houses. It facilitates communication between sellers and buyers and provides a seamless payment experience within the application.
+The Real Estate Application is a web platform designed for listing and selling houses. It facilitates communication between sellers and buyers and provides a seamless payment experience within the application.
 
 ## Features
 
