@@ -27,7 +27,7 @@ jobs:
       - name: Greet User
         run: |
           # Extract user information
-          user_name=$(jq -r '.member.login' "$GITHUB_EVENT_PATH")
+          user_name=$(jq -r '.sender.login' "$GITHUB_EVENT_PATH")
           
           # Greet the user based on the event type
           case $GITHUB_EVENT_NAME in
