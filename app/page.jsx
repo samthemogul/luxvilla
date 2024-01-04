@@ -3,21 +3,20 @@
 import Image from 'next/image'
 import styles from '@styles/page.module.css'
 import { useState } from 'react'
+import Hero from '@containers/Hero'
+import SearchBox from '@containers/SearchBox'
+import Features from '@containers/Features'
+import FeaturedProperties from '@containers/FeaturedProperties'
+import HomeCallToAction from '@containers/HomeCallToAction'
 
 export default function Home() {
-  const [ count, setCount ] = useState(0)
-
-  const handleIncrease = () => {
-    setCount(prev => prev + 1)
-  }
-  const handleDecrease = () => {
-    setCount(prev => prev - 1)
-  }
   return (
-    <>
-    <h1 className={styles.head}>Welcome to Luxvilla: {count}</h1>
-    <button onClick={handleIncrease}>Increase</button>
-    <button onClick={handleDecrease}>Decrease</button>
-    </>
+    <div className="main">
+      <Hero/>
+      <SearchBox />
+      <Features />
+      <FeaturedProperties />
+      <HomeCallToAction />
+    </div>
   )
 }
