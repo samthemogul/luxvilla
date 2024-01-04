@@ -3,6 +3,6 @@ import styles from '@styles/page.module.css'
 
 export default function Home() {
   return (
-    <h1 className={styles.head}>This is Luxvilla</h1>
+    <h1 className={styles.head}>Welcome to Luxvilla</h1>
   )
 }
