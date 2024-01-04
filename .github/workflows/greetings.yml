@@ -1,0 +1,43 @@
+name: Greet Users
+
+on:
+  # Trigger when a new commit is made
+  push:
+    branches:
+      - '*'
+
+  # Trigger when a pull request is closed
+  pull_request:
+    types:
+      - closed
+
+  # Trigger when a new issue is created
+  issues:
+    types:
+      - opened
+
+jobs:
+  greet_user:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Greet User
+        run: |
+          # Extract user information
+          user_name=$(jq -r '.member.login' "$GITHUB_EVENT_PATH")
+          
+          # Greet the user based on the event type
+          case $GITHUB_EVENT_NAME in
+            push)
+              echo "Hello @$user_name! Thank you for making your commit. Keep up the good work!"
+              ;;
+            pull_request)
+              echo "Thanks, @$user_name, for closing your pull request. Your contributions are appreciated!"
+              ;;
+            issues)
+              echo "Hi @$user_name! We've noticed your issue. Let's work together to resolve it. Thanks for your input!"
+              ;;
+          esac
