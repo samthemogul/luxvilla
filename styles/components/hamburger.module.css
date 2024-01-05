@@ -1,0 +1,25 @@
+.span_closed, .span_open {
+    display: none;
+}
+
+@media (max-width:640px) {
+    .span_closed, .span_open {
+        display: block;
+        background-color: var(--dark);
+        width: 20px;
+        height: 2px;
+        border-radius: var(--border-radius-curve);
+        margin: 4px 0;
+        transition: ease-out 0.2s;
+        z-index: 3;
+    }
+    .span_open:nth-child(2) {
+        transform: scale(0.1);
+    }
+    .span_open:nth-child(1) {
+        transform:rotate(45deg) translate(0.4em, 0.25em);
+    }
+    .span_open:nth-child(3) {
+        transform:rotate(-45deg) translate(0.4em, -0.3em);
+    }
+}

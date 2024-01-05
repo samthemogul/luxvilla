@@ -1,0 +1,77 @@
+/* General design( Desktop ) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--box-padding);
+    position: relative;
+}
+.mobile_nav {
+    display: none;
+}
+.menu_links a, .auth_links a {
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-right: 7rem;
+    transition: all 0.3s ease-in-out;
+}
+.menu_links a:last-child {
+    margin-right: 0;
+}
+.menu_links a:hover, .auth_links a:hover {
+    color: var(--accent);
+}
+.auth_links a {
+    margin-right: 3rem;
+}
+.auth_links button {
+    padding: 0.8rem 2.4rem;
+    background-color: var(--accent);
+    color: var(--wizard);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--border-radius-small);
+    transition: all 0.3s ease-in-out;
+}
+.auth_links button:hover {
+    background-color: var(--dark);
+}
+
+/* Mobile Design( Mobile Phone, iPad, Tablets ) */
+@media (max-width: 640px) {
+    .header {
+        padding: var(--mobile-box-padding);
+        border-bottom: 1px solid var(--border-ash);
+        background-color: var(--wizard);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .header img {
+        width: 80px;
+        height: 28px;
+    }
+    .menu_links {
+        display: none;
+    }
+    .auth_links a {
+        display: none;
+    }
+    .auth_links button {
+        padding: 0.7rem 1.5rem;
+        border-radius: var(--border-radius-curve);
+        font-weight: 500;
+        font-size: 1.1rem;
+        /* font-size: var(--mobile-text-size); */
+    }
+    .logo_nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+}
