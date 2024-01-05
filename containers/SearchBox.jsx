@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchBox = () => {
   return (
-    <div>SearchBox</div>
+    <div></div>
   )
 }
 

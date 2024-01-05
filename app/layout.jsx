@@ -25,9 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
+      <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
       <Header />
-      <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>{children}</body>
+        {children}
       <Footer />
+      </body>
     </html>
   );
 }
