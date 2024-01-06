@@ -1,4 +1,4 @@
-.container {
+/* .container {
     transform: translateY(-4rem);
     z-index: 5;
     display: flex;
@@ -7,5 +7,87 @@
         background-color: var(--wizard);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
+        padding: 1.5rem;
+    }
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 10%;
+    }
+    .option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 0 0.5rem;
+        .option_text {
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    }
+    .active {
+        width: 100%;
+        background: transparent;
+        height: 4px;
+    }
+    .bar {
+        background-color: var(--accent);
+        height: 100%;
+        width: 50%;
+        transition: 0.2s;
+    }
+    .buy {
+        transform: translateX(100%);
+    }
+    .input_sections {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
+        .input_field {
+            width: 20rem;
+            position: relative;
+            .icon {
+                position: absolute;
+                top: 40%;
+                right: 7%;
+                color: var(--light-accent);
+            }
+        }
+        .submit_button {
+            background-color: var(--accent);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            color: var(--wizard);
+            transition: 0.2s ease-out;
+        }
+        .submit_button:hover {
+            background-color: var(--dark);
+        }
+        .input_field:nth-child(1), .input_field:nth-child(2) {
+            border-right: 1px solid var(--border-ash);
+        }
+        .labels {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .inputs {
+            font-size: 1rem;
+            font-family: var(--font-inter);
+            height: 2rem;
+            width: 90%;
+        }
+    }
+} */
+@media (max-width:640px) {
+    .container {
+        display: block;
+        padding: var(--mobile-box-padding);
+    }
+    .searchbox {
+        padding: var(--mobile-box-padding);
+        border: 1px solid var(--border-ash);
     }
 }

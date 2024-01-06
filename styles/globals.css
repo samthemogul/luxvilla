@@ -1,3 +1,7 @@
+/* CONFIGURATIONS */
+
+
+
 :root {
   /* PRIMARY COLORS */
   --accent: #3C6E88;
@@ -61,9 +65,35 @@ button {
   cursor: pointer;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* SCROLLBAR SETTINGS  */
+body::-webkit-scrollbar {
+    width: 10px;
+    @media(max-width:600px){
+        display: none;
+    }
+}
+body::-webkit-scrollbar-track {
+    background: var(--border-ash);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+
 /* Mobile Configuration */
 @media only screen and (max-width: 640px) {
   body {
     font-size: var(--mobile-text-size);
   }
+  -webkit-scrollbar {
+    display: none !important;
+}
 }
