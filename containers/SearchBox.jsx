@@ -8,11 +8,17 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBox = () => {
   const [ optionClass, setOptionClass] = useState(styles.bar);
+  const [ activeRent, setActiveRent ] = useState(`${styles.option_text} ${styles.active_text}`)
+  const [ activeBuy, setActiveBuy ] = useState(styles.option_text)
   const changeToBuy = () => {
     setOptionClass(`${styles.bar} ${styles.buy}`)
+    setActiveBuy(`${styles.option_text} ${styles.active_text}`)
+    setActiveRent(styles.option_text)
   }
   const changeToRent = () => {
     setOptionClass(styles.bar);
+    setActiveRent(`${styles.option_text} ${styles.active_text}`)
+    setActiveBuy(styles.option_text)
   }
   return (
     <div className={styles.container}>
@@ -22,8 +28,8 @@ const SearchBox = () => {
 
         <div className={styles.options}>
           <div className={styles.option}>
-            <p onClick={changeToRent} className={styles.option_text}>Rent</p>
-            <p onClick={changeToBuy} className={styles.option_text}>Buy</p>
+            <p onClick={changeToRent} className={activeRent}>Rent</p>
+            <p onClick={changeToBuy} className={activeBuy}>Buy</p>
           </div>
           <div className={styles.active}>
             <div className={optionClass}></div>
@@ -36,7 +42,7 @@ const SearchBox = () => {
           <form>
           <div className={styles.input_sections}>
             <div className={styles.input_field}>
-            <label className={styles.labels} htmlFor="location">Location</label><br />
+              <label className={styles.labels} htmlFor="location">Location</label><br />
               <input className={styles.inputs} type="text" id="location" name="location" placeholder='select your city'/><br />
               <MyLocationIcon className={styles.icon} />
             </div>
@@ -56,6 +62,7 @@ const SearchBox = () => {
         </div>
       </div>
     </div>
+
   )
 }
 
