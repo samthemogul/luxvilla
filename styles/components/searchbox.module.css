@@ -1,0 +1,11 @@
+.container {
+    transform: translateY(-4rem);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    .searchbox {
+        background-color: var(--wizard);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+}
