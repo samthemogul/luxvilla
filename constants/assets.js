@@ -16,3 +16,10 @@ export const photoFiles = {
     }
 }
 
+export const feauturePhotos = {
+    feature1: {
+        url: 'https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704744034/features/ko9fkjlpz6xbtklzjayy.svg',
+        description: '',
+    }
+}
+
