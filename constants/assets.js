@@ -39,6 +39,14 @@ export const feautureCarouselPhotos = {
     feature1: {
         url: 'https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704744034/features/ko9fkjlpz6xbtklzjayy.svg',
         description: '',
+    },
+    feature2: {
+        url: 'https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704744034/features/ko9fkjlpz6xbtklzjayy.svg',
+        description: '',
+    },
+    feature3: {
+        url: 'https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704744034/features/ko9fkjlpz6xbtklzjayy.svg',
+        description: '',
     }
 }
 

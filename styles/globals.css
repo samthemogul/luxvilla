@@ -7,16 +7,17 @@
   --accent: #3C6E88;
   --dark-accent: #0B1538;
   --light-accent: #6CA5C0;
+  --light-accent-transparent: rgba(108,165,192,0.12);
   --wizard: #FFFFFF;
   --dark: #000000;
   --border-ash: #B9B9B9;
-  --shadow-ash: #F2F2F2;
+  --shadow-ash: #e9e9e9;
 
   /* STATUS COLORS */
   --alert: #E70830;
 
   /* BOX LAYOUT */
-  --box-shadow: 0 2rem 4rem var(--border-ash);
+  --box-shadow: 0 1rem 1rem var(--shadow-ash);
   --border-radius-small: 0.5rem;
   --border-radius : 1.2rem; 
   --border-radius-curve: 2rem;
