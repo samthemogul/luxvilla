@@ -2,7 +2,9 @@ import React from "react";
 import styles from "../styles/components/features.module.css";
 import Image from "next/image";
 import { feautureCarouselPhotos } from "@constants/assets";
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import { features } from "@constants/data";
+import Feature from "@components/Feature";
 
 const Features = () => {
   return (
@@ -15,8 +17,8 @@ const Features = () => {
                 className={styles.image}
                 src={feautureCarouselPhotos.feature1.url}
                 alt={feautureCarouselPhotos.feature1.description}
-                width={500}
-                height={400}
+                width={400}
+                height={300}
               />
             </div>
             <div className={styles.progressbar_container}>
@@ -38,66 +40,16 @@ const Features = () => {
           Finding a home has never been this{" "}
           <span className={styles.highlight}>easy</span>
         </h2>
-        <div className={styles.feature_con}>
-          <div className={styles.icon_con}>
-            <div className={styles.icon_frame}>
-              <HomeOutlinedIcon className={styles.icon} />
-            </div>
-          </div>
-          <div className={styles.feature_description}>
-            <h3 className={styles.feature_h3}>Curated property listings</h3>
-            <p className={styles.feature_p}>
-              Explore a handpicked selection of luxury properties tailored to
-              your preferences. Luxvilla&apos;s curated listings showcase exceptional
-              homes, ensuring a refined and exclusive real estate experience.
-            </p>
-          </div>
-        </div>
-        <div className={styles.feature_con}>
-          <div className={styles.icon_con}>
-            <div className={styles.icon_frame}>
-              <HomeOutlinedIcon className={styles.icon} />
-            </div>
-          </div>
-          <div className={styles.feature_description}>
-            <h3 className={styles.feature_h3}>Curated property listings</h3>
-            <p className={styles.feature_p}>
-              Explore a handpicked selection of luxury properties tailored to
-              your preferences. Luxvilla&apos;s curated listings showcase exceptional
-              homes, ensuring a refined and exclusive real estate experience.
-            </p>
-          </div>
-        </div>
-        <div className={styles.feature_con}>
-          <div className={styles.icon_con}>
-            <div className={styles.icon_frame}>
-              <HomeOutlinedIcon className={styles.icon} />
-            </div>
-          </div>
-          <div className={styles.feature_description}>
-            <h3 className={styles.feature_h3}>Curated property listings</h3>
-            <p className={styles.feature_p}>
-              Explore a handpicked selection of luxury properties tailored to
-              your preferences. Luxvilla&apos;s curated listings showcase exceptional
-              homes, ensuring a refined and exclusive real estate experience.
-            </p>
-          </div>
-        </div>
-        <div className={styles.feature_con}>
-          <div className={styles.icon_con}>
-            <div className={styles.icon_frame}>
-              <HomeOutlinedIcon className={styles.icon} />
-            </div>
-          </div>
-          <div className={styles.feature_description}>
-            <h3 className={styles.feature_h3}>Curated property listings</h3>
-            <p className={styles.feature_p}>
-              Explore a handpicked selection of luxury properties tailored to
-              your preferences. Luxvilla&apos;s curated listings showcase exceptional
-              homes, ensuring a refined and exclusive real estate experience.
-            </p>
-          </div>
-        </div>
+        {features.map((feature) => {
+          return (
+            <Feature
+              key={feature.title}
+              iconPath={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          );
+        })}
       </div>
     </div>
   );
