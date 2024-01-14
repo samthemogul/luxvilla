@@ -1,0 +1,13 @@
+.home_properties {
+    padding: 20px 10%;
+}
+.featured_property_header {
+    font-family: var(--font-ibm);
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.featured_properties_con {
+    display: flex;
+    justify-content: space-between;
+}
