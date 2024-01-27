@@ -2,6 +2,9 @@ import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "@styles/globals.css";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import StoreProvider from "@redux/store/StoreProvider";
+
+
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -27,9 +30,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       
       <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
-      <Header />
-        {children}
-      <Footer />
+        <StoreProvider>
+          <Header />
+          {children}
+          <Footer />
+          </StoreProvider>
       </body>
     </html>
   );
