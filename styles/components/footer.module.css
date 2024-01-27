@@ -54,3 +54,19 @@
     border: 1px solid var(--light-accent);
     color: var(--light-accent);
 }
+
+@media (max-width:640px) {
+    .container {
+        margin: var(--mobile-box-padding);
+        margin-top: 100px;
+    }
+    .navigation, .socials_downloads{
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        justify-content: center;
+    }
+    .socials, .downloads {
+        justify-content: center;
+    }
+}
