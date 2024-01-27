@@ -51,3 +51,21 @@ export const featuredProperties = [
     location: "Victoria Island, Lagos State",
   },
 ];
+
+export const actions = [
+  {
+    id:1,
+    header: 'Buy a Property',
+    action: 'see listed properties'
+  },
+  {
+    id:2,
+    header: 'Sell a Property',
+    action: 'list your properties'
+  },
+  {
+    id:3,
+    header: 'Rent a Property',
+    action: 'see listed properties'
+  }
+]

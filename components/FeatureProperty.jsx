@@ -1,10 +1,47 @@
-import React from 'react'
-import styles from '../styles/components/featuredproperties.module.css'
+"use client";
 
-const FeatureProperty = ({image, title, description, location}) => {
+import React, { useState } from "react";
+import styles from "../styles/components/featuredproperties.module.css";
+import Image from "next/image";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOutlined';
+
+const FeatureProperty = ({ image, title, description, location }) => {
+  const [descActive, setDescActive] = useState(false);
+
+  const handleDescActive = () => {
+    setDescActive(prev => !prev);
+  }
   return (
-    <div>FeatureProperty</div>
-  )
-}
+    <div className={styles.main}>
+      <div className={styles.background}>
+        <Image
+          className={styles.image}
+          src={image}
+          alt={description}
+          width={3000}
+          height={3000}
+        />
+      </div>
+      <div
+        className={styles.description_box}
+        onMouseEnter={handleDescActive}
+        onMouseLeave={handleDescActive}
+      >
+        {descActive ? <><h3 className={styles.description_header}>{title}</h3>
+        <div className={styles.location_con}>
+          <LocationOnOutlinedIcon className={styles.location_icon} />
+          <p className={styles.location}>{location}</p>
+        </div>
+        <p className={styles.description}>{description}</p>
+        <button>view details</button></> :
+        <div className={styles.desc_dropdown}>
+          <ExpandCircleDownOutlinedIcon className={styles.desc_dropdown_icon} />
+        </div>
+        }
+      </div>
+    </div>
+  );
+};
 
-export default FeatureProperty
+export default FeatureProperty;
