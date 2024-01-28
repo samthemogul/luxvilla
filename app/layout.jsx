@@ -1,4 +1,4 @@
-import { Inter, IBM_Plex_Serif } from "next/font/google";
+import { Inter, IBM_Plex_Serif} from "next/font/google";
 import "@styles/globals.css";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
@@ -6,11 +6,11 @@ import StoreProvider from "@redux/store/StoreProvider";
 
 
 
-const inter = Inter({ 
+const interFont = Inter({ 
   subsets: ["latin"], 
   variable: "--font-inter",
 });
-const ibmPlexSerif = IBM_Plex_Serif({
+const ibmPlexSerifFont = IBM_Plex_Serif({
   subsets: ["latin"],
   weight: "500",
   variable: "--font-ibm",
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       
-      <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
+      <body className={`${interFont.variable} ${ibmPlexSerifFont.variable}`}>
         <StoreProvider>
           <Header />
           {children}
