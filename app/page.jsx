@@ -8,10 +8,12 @@ import SearchBox from '@containers/SearchBox'
 import Features from '@containers/Features'
 import FeaturedProperties from '@containers/FeaturedProperties'
 import HomeCallToAction from '@containers/HomeCallToAction'
+import SideBar from '@components/SideBar'
 
 export default function Home() {
   return (
     <div className="main">
+      <SideBar />
       <Hero/>
       <SearchBox />
       <Features />

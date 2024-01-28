@@ -1,0 +1,101 @@
+.calltoaction_con {
+    height: 600px;
+    margin: 15px 10%;
+    margin-top: 100px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+}
+.calltoaction_con img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cta_description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: var(--mobile-box-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.cta_header {
+    color: var(--dark-accent);
+    font-family: var(--font-ibm);
+    font-weight: 600;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+.tagline {
+    color: var(--wizard);
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+.actions {
+    .action {
+        padding: 0.8rem 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--accent);
+        border-radius: var(--border-radius);
+        width: 80%;
+        .action_call {
+            display: flex;
+            align-items: center;
+            color: var(--wizard);
+            gap: 0.5rem;
+            transition: 0.2s all ease;
+        }
+        .action_call:hover {
+            gap: 1.2rem;
+            color: var(--light-accent);
+        }
+        .action_title {
+            color: var(--wizard);
+            font-family: var(--font-ibm);
+            font-size: 2rem;
+            font-weight: 200;
+            width: 50%;
+        }
+        .action_description {
+            font-family: var(--font-inter);
+            font-size: 1rem;
+        }
+        .action_icon {
+            color: var(--light-accent);
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .calltoaction_con {
+        height: 800px;
+        margin: 0;
+        margin-top: 100px;
+        padding: 0;
+        border-radius: 0;
+    }
+    .cta_header {
+        font-size: 2rem;
+    }
+    .tagline {
+        font-size: 1.1rem;
+        color: var(--accent);
+    }
+    .actions {
+        flex-direction: column;
+        .action {
+            width: 100%;
+        }
+    }
+}

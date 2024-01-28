@@ -2,22 +2,26 @@
 
 import { useEffect, useState } from 'react'
 import styles from '../styles/components/hamburger.module.css'
+import { useDispatch, useSelector } from "react-redux"
+import { sideBarActions } from '@redux/slices/sideBarSlice'
 
 const Hamburger = () => {
     const [spanClass, setSpanClass] = useState(styles.span_closed)
-    const [active, setActive ] = useState(false)
+
+    const activeSidebar = useSelector(state => state.sidebar.display)
+    const dispatch = useDispatch()
 
     const handleToggle = () => {
-        setActive(prev => !prev)
+        dispatch(sideBarActions.toggleSidebar())
     }
 
     useEffect(() => {
-        if(!active){
+        if(!activeSidebar){
             setSpanClass(styles.span_closed)
         } else {
             setSpanClass(styles.span_open)
         }
-    }, [active])
+    }, [activeSidebar])
   return (
     <button onClick={handleToggle}>
         <div className={spanClass}></div>

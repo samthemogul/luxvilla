@@ -1,0 +1,28 @@
+.main_con {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--wizard);
+    z-index: 1;
+    padding-top: 100px;
+    transition: 0.2s all ease;
+}
+.hidden {
+    transform: translateX(-100%);
+}
+.link_con {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: var(--box-padding);
+}
+.menu_links {
+    border-bottom: 1px solid var(--border-ash);
+    padding: 1rem 0;
+}
+
+@media (min-width:640px) {
+    .main_con {
+        display: none;
+    }
+}

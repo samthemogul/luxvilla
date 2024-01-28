@@ -16,7 +16,7 @@
     font-weight: 500;
     cursor: pointer;
     border-radius: var(--border-radius-small);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .main button:hover {
     background-color: var(--dark);
@@ -27,11 +27,11 @@
     object-fit: cover;
 }
 .hero_text h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
 }
 .hero_text p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--border-ash);
     margin-bottom: 2rem;
 }
@@ -53,7 +53,7 @@
         font-size: 2.5rem;
     }
     .hero_text p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .hero_text h1, .hero_text p {
         margin-bottom: 1rem;
