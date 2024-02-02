@@ -103,8 +103,11 @@
         padding: 5%;
         margin-bottom: 2rem;
     }
-    .image {
+    .image, .image_skeleton {
         height: 70%;
+    }
+    .image_skeleton {
+        width: 300px;
     }
     .icon_con {
         display: none;

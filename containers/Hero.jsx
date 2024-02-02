@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/components/hero.module.css";
 import { photoFiles } from "@constants/assets";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
           Find available properties and connect with buyers and sellers in a
           fast and seamless way.
         </p>
-        <button>Get started</button>
+        <Link href={'/signup'}><button>Get started</button></Link>
       </div>
       <div>
         <Image

@@ -13,7 +13,7 @@ import SideBar from '@components/SideBar'
 export default function Home() {
   return (
     <div className="main">
-      <SideBar />
+      
       <Hero/>
       <SearchBox />
       <Features />
