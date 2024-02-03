@@ -5,6 +5,11 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import SideBar from "@components/SideBar";
 import StoreProvider from "@redux/store/StoreProvider";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+
+config.autoAddCss = false;
 
 
 

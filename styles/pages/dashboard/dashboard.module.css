@@ -1,0 +1,18 @@
+.main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 2rem;
+    padding: var(--box-padding);
+    position: relative;
+    font-family: var(--font-inter);
+}
+.search_and_listings {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.name_header {
+    font-size: 2rem;
+    font-family: var(--font-ibm);
+    font-weight: 500;
+}

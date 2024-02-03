@@ -26,7 +26,7 @@
     align-items: center;
 }
 .dashboard_main_menu p {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1rem;
     transition: 0.2s all ease;
 }
@@ -36,6 +36,7 @@
 .dashboard_sidemenu {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
 }
 .report_con {
     display: flex;
@@ -59,16 +60,15 @@
     align-items: center;
 }
 .notification_con .header_sideicon {
-    font-size: 2.5rem;
-    font-weight: 100;
+    font-size: 1.6rem;
 }
 .note_mark {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1.4rem;
-    height: 1.4rem;
-    background-color: var(--accent);
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--alert);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -80,8 +80,10 @@
     font-size: 0.8rem;
     font-weight: 600;
 }
-.notification_con:hover .note_mark{
-    display: none;
+
+.profile_container .profile_icon {
+    font-size: 2.5rem;
+    color: var(--border-ash);
 }
 .mobile_nav {
     display: none;

@@ -14,6 +14,9 @@ import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux"
 import { sideBarActions } from '@redux/slices/sideBarSlice'
 import { photoFiles } from "@constants/assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell, faComment } from "@fortawesome/free-regular-svg-icons";
+
 
 
 const Header = () => {
@@ -78,16 +81,19 @@ const Header = () => {
         <div className={styles.dashboard_sidemenu}>
         <Link className={styles.listing_btn} href={'/'}><button>+ New Listing</button></Link>
         <div className={styles.notification_con}>
-          <div className={styles.note_mark}><p>3</p></div>
-          <button><ChatBubbleOutlineOutlinedIcon className={styles.header_sideicon} /></button>
+          <div className={styles.note_mark}><p></p></div>
+          <button>
+          <FontAwesomeIcon icon={faComment} className={styles.header_sideicon} />
+          </button>
         </div>
         <div className={styles.notification_con}>
-          <div className={styles.note_mark}><p>2</p></div>
-          <button><NotificationsOutlinedIcon className={styles.header_sideicon} /></button>
+          <div className={styles.note_mark}><p></p></div>
+          <button>
+          <FontAwesomeIcon icon={faBell} className={styles.header_sideicon} /></button>
         </div>
         <div className={styles.profile_container}>
           <button>
-            <AccountCircleIcon />
+            <AccountCircleIcon className={styles.profile_icon} />
             {/* <Image src={profilePhoto} width={500} height={500} alt={name} /> */}
           </button>
         </div>

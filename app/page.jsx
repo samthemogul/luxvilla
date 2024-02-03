@@ -15,7 +15,7 @@ export default function Home() {
     <div className="main">
       
       <Hero/>
-      <SearchBox />
+      <SearchBox type="container" />
       <Features />
       <FeaturedProperties />
       <HomeCallToAction />
