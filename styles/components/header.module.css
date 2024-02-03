@@ -20,18 +20,28 @@
     align-items: center;
     gap: 2.5rem;
 }
+.dashboard_menus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .dashboard_main_menu p {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1rem;
     transition: 0.2s all ease;
 }
 .dashboard_main_menu p:hover {
     color: var(--accent);
 }
+.dashboard_sidemenu {
+    display: flex;
+    align-items: center;
+}
 .report_con {
     display: flex;
     align-items: center;
     .menu_dropdown {
+        font-size: 1.1rem;
         transition: 0.2s all ease;
     }
     cursor: pointer;
@@ -40,6 +50,37 @@
     transform: rotate(-90deg);
 }
 .res_btn {
+    display: none;
+}
+.notification_con {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notification_con .header_sideicon {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+.note_mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.note_mark p {
+    color: var(--wizard);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.notification_con:hover .note_mark{
     display: none;
 }
 .mobile_nav {
@@ -61,17 +102,17 @@
 .auth_links a {
     margin-right: 3rem;
 }
-.auth_links button, .res_btn button {
+.auth_links button, .res_btn button, .listing_btn button {
     padding: 0.8rem 2.4rem;
     background-color: var(--accent);
     color: var(--wizard);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     border-radius: var(--border-radius-small);
     transition: all 0.2s ease-in-out;
 }
-.auth_links button:hover {
+.auth_links button:hover, .listing_btn button:hover {
     background-color: var(--dark);
 }
 

@@ -7,9 +7,13 @@ import Link from "next/link";
 import { logoFiles } from "@constants/assets";
 import Hamburger from "./Hamburger";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux"
 import { sideBarActions } from '@redux/slices/sideBarSlice'
+import { photoFiles } from "@constants/assets";
 
 
 const Header = () => {
@@ -22,8 +26,11 @@ const Header = () => {
     authHeader: false,
     dashboardHeader: false
   })
+  const name = "Samuel Emeka"
 
-  
+  const profilePhoto = () => {
+    return photoFiles.defaultProfilePhoto.url
+  }
 
  
 
@@ -56,6 +63,8 @@ const Header = () => {
         <Link href='/login'>Login</Link>
         <Link href={'/signup'}><button>Sign Up</button></Link>
       </div></>}
+
+      {/* Dashboard Header */}
       {header.dashboardHeader && <div className={styles.dashboard_menus}>
         <div className={styles.dashboard_main_menu}>
           <Link href={'/'}><p>My properties</p></Link>
@@ -67,7 +76,22 @@ const Header = () => {
           </div>
         </div>
         <div className={styles.dashboard_sidemenu}>
-
+        <Link className={styles.listing_btn} href={'/'}><button>+ New Listing</button></Link>
+        <div className={styles.notification_con}>
+          <div className={styles.note_mark}><p>3</p></div>
+          <button><ChatBubbleOutlineOutlinedIcon className={styles.header_sideicon} /></button>
+        </div>
+        <div className={styles.notification_con}>
+          <div className={styles.note_mark}><p>2</p></div>
+          <button><NotificationsOutlinedIcon className={styles.header_sideicon} /></button>
+        </div>
+        <div className={styles.profile_container}>
+          <button>
+            <AccountCircleIcon />
+            {/* <Image src={profilePhoto} width={500} height={500} alt={name} /> */}
+          </button>
+        </div>
+        <button></button>
         </div>
         </div>}
       {!header.dashboardHeader && <Link className={styles.res_btn} href={'/signup'}><button>Sign Up</button></Link>}
