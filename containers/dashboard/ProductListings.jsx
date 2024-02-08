@@ -26,6 +26,7 @@ const ProductListings = () => {
     
   return (
     <div className={styles.listing_container}>
+      {/* Listing filter */}
       <div className={styles.filter_container}>
         <div className={styles.filter_options}>
           <p onClick={() => handleFilter("all")}><span>All</span></p>
@@ -38,6 +39,8 @@ const ProductListings = () => {
         </div>
       </div>
       <p className={styles.tagline}>Search for property listings near you the match your preference and find your ideal home today.</p>
+      {/* Listings */}
+      
     </div>
   );
 };

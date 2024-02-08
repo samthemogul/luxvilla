@@ -51,6 +51,8 @@ export const featuredProperties = [
     location: "Victoria Island, Lagos State",
   },
 ];
+ const date = new Date()
+ 
 
 export const actions = [
   {
@@ -68,4 +70,40 @@ export const actions = [
     header: 'Rent a Property',
     action: 'see listed properties'
   }
+]
+
+export const listings = [
+  {
+    id: 1,
+    title: "267, Etim Eyan Crescent Flat 29A",
+    description: "This stunning beachfront property offers an unparalleled combination of luxury, comfort, and breathtaking views. Nestled along the pristine shores, this residence presents a unique opportunity for those seeking a refined coastal lifestyle...",
+    displayImage: "https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704410351/pexels-maria-orlova-4947782_rmral4.jpg",
+    type:"rent",
+    budget: "450k/year",
+    location: "Victoria Island, Lagos",
+    rating: "4.0/5",
+    dateListed: date.getDate() ,
+  },
+  {
+    id: 2,
+    title: "267, Etim Eyan Crescent Flat 29A",
+    description: "This stunning beachfront property offers an unparalleled combination of luxury, comfort, and breathtaking views. Nestled along the pristine shores, this residence presents a unique opportunity for those seeking a refined coastal lifestyle...",
+    displayImage: "https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704410349/pexels-maria-orlova-4946982_n7v7rj.jpg",
+    type:"buy",
+    budget: "450k/year",
+    location: "Victoria Island, Lagos",
+    rating: "3.0/5",
+    dateListed: date.getDate() ,
+  },
+  {
+    id: 3,
+    title: "267, Etim Eyan Crescent Flat 29A",
+    description: "This stunning beachfront property offers an unparalleled combination of luxury, comfort, and breathtaking views. Nestled along the pristine shores, this residence presents a unique opportunity for those seeking a refined coastal lifestyle...",
+    displayImage: "https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704410350/pexels-maria-orlova-4916516_y8fdon.jpg",
+    type:"rent",
+    budget: "450k/year",
+    location: "Victoria Island, Lagos",
+    rating: "4.0/5",
+    dateListed: date.getDate() ,
+  },
 ]
