@@ -32,6 +32,9 @@ export const photoFiles = {
     callToActionPhoto: {
         url: 'https://res.cloudinary.com/dnq4kwg8w/image/upload/v1704410350/pexels-alena-darmel-7641899_oevz37.jpg',
         description: ''
+    },
+    defaultProfilePhoto: {
+        url: '',
     }
 }
 

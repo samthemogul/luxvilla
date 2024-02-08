@@ -6,7 +6,7 @@ import MyLocationIcon from '@mui/icons-material/MyLocation';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 
-const SearchBox = () => {
+const SearchBox = ({type}) => {
   const [ optionClass, setOptionClass] = useState(styles.bar);
   const [ activeRent, setActiveRent ] = useState(`${styles.option_text} ${styles.active_text}`)
   const [ activeBuy, setActiveBuy ] = useState(styles.option_text)
@@ -21,7 +21,7 @@ const SearchBox = () => {
     setActiveBuy(styles.option_text)
   }
   return (
-    <div className={styles.container}>
+    <div className={styles[type]}>
       <div className={styles.searchbox}>
 
         {/* Rent and Buy option slider */}

@@ -1,8 +1,15 @@
 import { Inter, IBM_Plex_Serif} from "next/font/google";
 import "@styles/globals.css";
+import 'react-loading-skeleton/dist/skeleton.css'
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import SideBar from "@components/SideBar";
 import StoreProvider from "@redux/store/StoreProvider";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+
+config.autoAddCss = false;
 
 
 
@@ -32,6 +39,7 @@ export default function RootLayout({ children }) {
       <body className={`${interFont.variable} ${ibmPlexSerifFont.variable}`}>
         <StoreProvider>
           <Header />
+          <SideBar />
           {children}
           <Footer />
           </StoreProvider>

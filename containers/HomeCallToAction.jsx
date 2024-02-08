@@ -8,6 +8,7 @@ import { actions } from "@constants/data";
 const HomeCallToAction = () => {
   return (
     <div className={styles.calltoaction_con}>
+      <div className={styles.overlay}></div>
       <Image
         src={photoFiles.callToActionPhoto.url}
         alt={photoFiles.callToActionPhoto.description}

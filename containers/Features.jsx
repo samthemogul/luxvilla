@@ -5,6 +5,7 @@ import { feautureCarouselPhotos } from "@constants/assets";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import { features } from "@constants/data";
 import Feature from "@components/Feature";
+import Skeleton from 'react-loading-skeleton'
 
 const Features = () => {
   return (
@@ -13,13 +14,13 @@ const Features = () => {
         <div className={styles.ill_con}>
           <div className={styles.illustration_container}>
             <div className={styles.feature_images}>
-              <Image
+                { <Image
                 className={styles.image}
                 src={feautureCarouselPhotos.feature1.url}
                 alt={feautureCarouselPhotos.feature1.description}
                 width={400}
                 height={300}
-              />
+              />}
             </div>
             <div className={styles.progressbar_container}>
               <div className={styles.progressbar}>

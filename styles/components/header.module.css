@@ -5,6 +5,85 @@
     align-items: center;
     padding: var(--box-padding);
     position: relative;
+    font-family: var(--font-inter);
+}
+.dashboard_header {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+.dashboard_main_menu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.dashboard_menus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard_main_menu p {
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.2s all ease;
+}
+.dashboard_main_menu p:hover {
+    color: var(--accent);
+}
+.dashboard_sidemenu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.report_con {
+    display: flex;
+    align-items: center;
+    .menu_dropdown {
+        font-size: 1.1rem;
+        transition: 0.2s all ease;
+    }
+    cursor: pointer;
+}
+.report_con:hover .menu_dropdown {
+    transform: rotate(-90deg);
+}
+.res_btn {
+    display: none;
+}
+.notification_con {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notification_con .header_sideicon {
+    font-size: 1.6rem;
+}
+.note_mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--alert);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.note_mark p {
+    color: var(--wizard);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.profile_container .profile_icon {
+    font-size: 2.5rem;
+    color: var(--border-ash);
 }
 .mobile_nav {
     display: none;
@@ -25,23 +104,23 @@
 .auth_links a {
     margin-right: 3rem;
 }
-.auth_links button {
+.auth_links button, .res_btn button, .listing_btn button {
     padding: 0.8rem 2.4rem;
     background-color: var(--accent);
     color: var(--wizard);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     border-radius: var(--border-radius-small);
     transition: all 0.2s ease-in-out;
 }
-.auth_links button:hover {
+.auth_links button:hover, .listing_btn button:hover {
     background-color: var(--dark);
 }
 
 /* Mobile Design( Mobile Phone, iPad, Tablets ) */
 @media (max-width: 640px) {
-    .header {
+    .header, .dashboard_header {
         padding: var(--mobile-box-padding);
         border-bottom: 1px solid var(--border-ash);
         background-color: var(--wizard);
@@ -50,6 +129,9 @@
         left: 0;
         width: 100%;
         z-index: 2;
+    }
+    .res_btn {
+        display: block;
     }
     .header img {
         width: 80px;
