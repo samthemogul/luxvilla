@@ -25,7 +25,7 @@ const SignInPage = () => {
           <button type='submit'>continue with Email</button>
           <div className={styles.divider}>
           <div className={styles.divider_line}></div>
-          <p>Don't have an account?</p>
+          <p>Dont have an account?</p>
           <div className={styles.divider_line}></div>
         </div>
         </form>
