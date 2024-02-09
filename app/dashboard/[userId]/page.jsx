@@ -1,11 +1,15 @@
-import React from 'react'
+"use client"
 
+import { useEffect } from "react"
+import { useRouter } from "next/router"
+import { useParams } from "next/navigation"
 import ProductListings from '@containers/dashboard/ProductListings'
 import ProfileOptions from '@containers/dashboard/ProfileOptions'
 import SearchBox from '@containers/SearchBox'
 import styles from '@styles/pages/dashboard/dashboard.module.css'
 
 const Dashboard = () => {
+ 
 
   const firstName = "Samuel"
   return (
