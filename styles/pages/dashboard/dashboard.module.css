@@ -1,8 +1,10 @@
 .main {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 75% 25%;
+    height: 110vh;
     gap: 2rem;
     padding: var(--box-padding);
+    padding-top: 100px;
     position: relative;
     font-family: var(--font-inter);
 }
@@ -10,9 +12,24 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    overflow: auto;
+}
+.search_and_listings::-webkit-scrollbar {
+    display: none;
+}
+.search_and_listings {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .name_header {
     font-size: 2rem;
     font-family: var(--font-ibm);
     font-weight: 500;
+}
+
+
+.profile_options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }

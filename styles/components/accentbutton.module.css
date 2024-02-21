@@ -1,0 +1,17 @@
+.accentbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2.4rem;
+    background-color: var(--accent);
+    color: var(--wizard);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--border-radius-small);
+    transition: all 0.2s ease-in-out;
+}
+.accentbutton:hover {
+    background-color: var(--dark);
+}

@@ -13,7 +13,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: relative;
+    width: 100%;
+    background-color: var(--wizard);
+    z-index: 3;
+    position: fixed;
 }
 .dashboard_main_menu {
     display: flex;

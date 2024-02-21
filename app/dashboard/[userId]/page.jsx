@@ -19,7 +19,7 @@ const Dashboard = () => {
         <SearchBox className={styles.dashboard_searchbox} type="dashboard_searchbox" />
         <ProductListings />
       </div>
-      <div>
+      <div className={styles.progress_and_options}>
       <ProfileOptions />
       </div>
     </div>

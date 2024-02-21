@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent);
+    padding: 20px;
+    gap: 1rem;
+    border-radius: var(--border-radius-small);
+}
+.slide_header {
+    color: var(--wizard);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-ibm);
+}
+.btn_img {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0.5rem;
+}
+.btn_img button {
+    padding: 10px 20px;
+    border-radius: var(--border-radius-small);
+    color: var(--dark);
+    background-color: var(--wizard);
+    transition: 0.2s ease all;
+    font-size: 1rem;
+}
+.btn_img button:hover {
+    background-color: var(--dark);
+    color: var(--wizard);
+}
+.progressbar_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    .progressbar {
+        display: flex;
+        justify-content: stretch;
+        overflow: hidden;
+        height: 5px;
+        background-color: var(--border-ash);
+        border-radius: var(--border-radius-small);
+        position: relative;
+        .bar {
+            background-color: var(--wizard);
+            width: 70%;
+        }
+    }
+}

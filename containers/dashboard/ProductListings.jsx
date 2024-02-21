@@ -54,6 +54,7 @@ const ProductListings = () => {
         your ideal home today.
       </p>
       {/* Listings */}
+      <div className={styles.listings_box}>
       {listing.map((item) => {
         return (
           <Listing
@@ -69,6 +70,7 @@ const ProductListings = () => {
           />
         );
       })}
+      </div>
     </div>
   );
 };

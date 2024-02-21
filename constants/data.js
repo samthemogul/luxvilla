@@ -81,7 +81,7 @@ export const listings = [
     type:"rentage",
     budget: "450k/year",
     location: "Victoria Island, Lagos",
-    rating: "4.0/5",
+    rating: 4,
     dateListed: date.getDate() ,
   },
   {
@@ -92,7 +92,7 @@ export const listings = [
     type:"buy",
     budget: "450k/year",
     location: "Victoria Island, Lagos",
-    rating: "3.0/5",
+    rating: 3,
     dateListed: date.getDate() ,
   },
   {
@@ -103,7 +103,7 @@ export const listings = [
     type:"rentage",
     budget: "450k/year",
     location: "Victoria Island, Lagos",
-    rating: "4.0/5",
+    rating: 4,
     dateListed: date.getDate() ,
   },
 ]

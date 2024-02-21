@@ -48,3 +48,8 @@
     color: var(--border-ash);
     font-size: 1rem;
 }
+.listings_box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
