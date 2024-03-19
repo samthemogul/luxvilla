@@ -53,3 +53,25 @@
     flex-direction: column;
     gap: 0;
 }
+
+@media (max-width:640px) {
+    .listing_container {
+        margin-top: 20px;
+    }
+    .filter_options {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .bar, .bar1, .bar2 {
+        width: 120px;
+    }
+    .bar1 {
+        transform: translateX(120px);
+    }
+    .bar2 {
+        transform: translateX(250px);
+    }
+    .listings_box {
+        gap: 1.5rem;
+    }
+}

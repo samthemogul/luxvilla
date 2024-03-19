@@ -15,3 +15,9 @@
 .accentbutton:hover {
     background-color: var(--dark);
 }
+
+@media (max-width:640px) {
+    .accentbutton {
+        padding: 0.8rem 2rem;
+    }
+}

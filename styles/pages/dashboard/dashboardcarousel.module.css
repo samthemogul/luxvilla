@@ -19,7 +19,7 @@
 }
 .btn_img button {
     padding: 10px 20px;
-    border-radius: var(--border-radius-small);
+    border-radius: var(--border-radius);
     color: var(--dark);
     background-color: var(--wizard);
     transition: 0.2s ease all;

@@ -14,12 +14,13 @@ config.autoAddCss = false;
 
 
 const interFont = Inter({ 
-  subsets: ["latin"], 
+  subsets: ["latin"],
+  weight: ["400", "500", '600'], 
   variable: "--font-inter",
 });
 const ibmPlexSerifFont = IBM_Plex_Serif({
   subsets: ["latin"],
-  weight: "500",
+  weight: ["400", "500", "600", "700"],
   variable: "--font-ibm",
 });
 
