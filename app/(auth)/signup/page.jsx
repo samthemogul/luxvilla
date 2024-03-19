@@ -5,9 +5,17 @@ import styles from '@styles/pages/auth.module.css'
 import GoogleButton from '@components/GoogleButton'
 import CheckBox from '@components/CheckBox'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const SignUpPage = () => {
   const [focused, setFocused] = useState(false)
+  const router = useRouter()
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    router.push('/auth/1/security-question')
+  }
   return (
     <div className={styles.main}>
       <div className={styles.form_container}>
@@ -18,7 +26,7 @@ const SignUpPage = () => {
           <p>or</p>
           <div className={styles.divider_line}></div>
         </div>
-        <form className={styles.form}>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.name_inputs}>
             <input className={styles.inputs} type="text" name='firstname' placeholder='Firstname' />
             <input className={styles.inputs} type="text" name='lastname' placeholder='Lastname' />
@@ -34,7 +42,7 @@ const SignUpPage = () => {
             <CheckBox />
             <p>Yes, I understand and agree with the Luxvilla <Link href={'/'}>Terms of service</Link> and <Link href={'/'}>Privacy policy</Link></p>
           </div>
-          <button type='submit'>Create my account</button>
+          <button  type='submit'>Create my account</button>
           <p className={styles.auth_option}>Already have an account? <strong><Link href={'/login'}>Log In</Link></strong></p>
         </form>
       </div>

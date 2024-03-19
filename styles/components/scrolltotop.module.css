@@ -1,0 +1,32 @@
+.scroll_container {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--wizard);
+    border: 2px solid var(--accent);
+    border-right: none;
+    /* border-radius: var(--border-radius-curve); */
+    border-top-left-radius: var(--border-radius-small);
+    border-bottom-left-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: 0.5s all ease;
+    .scroll_icon {
+        color: var(--accent);
+        transition: 0.2s all ease;
+    }
+}
+
+.scroll_container:hover {
+    background-color: var(--dark);
+    border: 2px solid var(--dark);
+    border-right: none;
+    .scroll_icon {
+        color: var(--wizard);
+    }
+}

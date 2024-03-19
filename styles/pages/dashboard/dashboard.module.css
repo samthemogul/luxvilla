@@ -1,7 +1,7 @@
 .main {
     display: grid;
     grid-template-columns: 75% 25%;
-    height: 110vh;
+    /* height: 110vh; */
     gap: 2rem;
     padding: var(--box-padding);
     padding-top: 100px;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    overflow: auto;
+    /* overflow: auto; */
 }
 .search_and_listings::-webkit-scrollbar {
     display: none;

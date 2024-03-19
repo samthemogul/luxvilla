@@ -1,0 +1,48 @@
+.sidepop_container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(11, 21, 56, 0.5);
+    z-index: 100;
+    .sidepop_content {
+        border-bottom-left-radius: var(--border-radius-curve);
+        border-top-left-radius: var(--border-radius-curve);
+        padding: 2rem;
+        background-color: var(--wizard);
+    }
+    .pop_buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .new_window_link a {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        gap: 0.2rem;
+        transition: 0.2s all ease;
+    }
+    .new_window_link a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+    }
+    .pop_close_btn {
+        color: var(--dark);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s all ease;
+    }
+    .pop_close_btn:hover {
+        background-color: var(--shadow-ash);
+    }
+}

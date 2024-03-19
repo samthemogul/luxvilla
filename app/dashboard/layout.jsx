@@ -1,5 +1,4 @@
 
-
 export const metadata = {
     title: "Dashboard",
     description:
@@ -14,6 +13,8 @@ export const metadata = {
 export default function DashboardLayout({children}) {
     
     return (
-        <>{children}</>
+        <>
+        {children}
+        </>
     )
 }

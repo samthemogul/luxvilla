@@ -8,6 +8,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnOutlined from "@mui/icons-material/LocationOnOutlined";
 import Rating from "./Rating";
 import { Chat } from "@mui/icons-material";
+import { sidePopupActions } from "@redux/slices/sidePopupSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 
 const Listing = ({
@@ -21,9 +23,15 @@ const Listing = ({
   dateListed,
 }) => {
   const [liked, setLiked] = useState(false);
+ 
+  const dispatch = useDispatch();
 
   const handleLike = () => {
     setLiked(prev => !prev)
+  }
+
+  const showMore = () => {
+    dispatch(sidePopupActions.show({listingPopup : true}));
   }
   
   return <div className={styles.container}>
@@ -52,7 +60,7 @@ const Listing = ({
             <p className={styles.location_text}>{location}</p>
         </div>
         <div className={styles.actions}>
-          <button className={stylesAccent.accentbutton}>view details</button>
+          <button onClick={showMore} className={stylesAccent.accentbutton}>view details</button>
           <button className={stylesBorder.borderbutton}>
             <Chat />
             <p>message owner</p>

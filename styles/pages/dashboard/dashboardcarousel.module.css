@@ -13,9 +13,9 @@
     font-family: var(--font-ibm);
 }
 .btn_img {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 .btn_img button {
     padding: 10px 20px;
