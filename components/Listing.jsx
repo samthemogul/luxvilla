@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 import styles from '@styles/components/listing.module.css'
 import stylesAccent from '@styles/components/accentbutton.module.css'
@@ -9,6 +11,7 @@ import LocationOnOutlined from "@mui/icons-material/LocationOnOutlined";
 import Rating from "./Rating";
 import { Chat } from "@mui/icons-material";
 import { sidePopupActions } from "@redux/slices/sidePopupSlice";
+import { sideBarActions } from "@redux/slices/sideBarSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 
@@ -31,7 +34,8 @@ const Listing = ({
   }
 
   const showMore = () => {
-    dispatch(sidePopupActions.show({listingPopup : true}));
+    console.log("details");
+    dispatch(sidePopupActions.show());
   }
   
   return <div className={styles.container}>
@@ -60,7 +64,7 @@ const Listing = ({
             <p className={styles.location_text}>{location}</p>
         </div>
         <div className={styles.actions}>
-          <button onClick={showMore} className={stylesAccent.accentbutton}>view details</button>
+          <button onClick={showMore} type="button" className={stylesAccent.accentbutton}>view details</button>
           <button className={stylesBorder.borderbutton}>
             <Chat />
             <p>message owner</p>

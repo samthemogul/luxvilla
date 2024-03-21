@@ -12,12 +12,15 @@
   --dark: #000000;
   --border-ash: #B9B9B9;
   --shadow-ash: #e9e9e9;
+  --active:rgb(0, 186, 0);
 
   /* STATUS COLORS */
   --alert: #E70830;
 
   /* BOX LAYOUT */
   --box-shadow: 0 1rem 1rem var(--shadow-ash);
+  --box-shadow-flat: 0 0 1rem 3px var(--shadow-ash);
+  --box-shadow-dark: 0 0 1rem 1px var(--border-ash);
   --border-radius-small: 0.5rem;
   --border-radius : 1.2rem; 
   --border-radius-curve: 2rem;

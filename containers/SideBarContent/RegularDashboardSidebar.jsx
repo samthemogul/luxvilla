@@ -8,7 +8,10 @@ const RegularDashboardSidebar = () => {
   return (
     <ul className={styles.link_con}>
             <li className={styles.menu_links}>
-                <Link href={'/'}>My Properties</Link>
+                <Link href={'/dashboard/1'}>Dashboard</Link>
+            </li>
+            <li className={styles.menu_links}>
+                <Link href={'/dashboard/1/property-listings'}>My Properties</Link>
             </li>
             <li className={styles.menu_links}>
                 <Link href={'/'}>Reports</Link>

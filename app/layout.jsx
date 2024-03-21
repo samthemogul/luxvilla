@@ -4,8 +4,12 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import SideBar from "@components/SideBar";
+import SidePopup from "@containers/dashboard/SidePopups/SidePopup";
+import CenterPopup from "@containers/dashboard/CenterPopups/CenterPopup";
 import ScrollToTop from "@components/ScrollToTop";
 import StoreProvider from "@redux/store/StoreProvider";
+import { NotificationProvider } from "@context/NotificationContext";
+import { ProfileProvider } from "@context/ProfileContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 
@@ -42,7 +46,10 @@ export default function RootLayout({ children }) {
       
       <body className={`${interFont.variable} ${ibmPlexSerifFont.variable}`}>
         <StoreProvider>
-          <Header />
+        <SidePopup />
+        <CenterPopup />
+        <ProfileProvider><NotificationProvider><Header /></NotificationProvider></ProfileProvider>
+          
           <SideBar />
           {children}
           <ScrollToTop />

@@ -1,0 +1,181 @@
+/* Report Navigation Dropdown */
+.report_nav_container {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: -120%;
+    transform: translateY(130px);
+    border-radius: var(--border-radius-small);
+    background-color: var(--wizard);
+    box-shadow: var(--box-shadow-flat);
+    opacity: 0;
+    color: var(--dark);
+    width: 250px;
+    z-index: 100;
+    overflow: hidden;
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    .nav_link_item {
+        width: 100%;
+    }
+    .nav_link_item a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        font-weight: 500;
+        transition: 0.2s all ease;
+    }
+    .nav_link_item a:hover {
+        background-color: var(--light-accent-transparent);
+        color: var(--accent);
+    }
+}
+
+.view_dropdown:hover {
+    .report_nav_container {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+/* Notifications Navigation DropDown */
+.notification_container {
+    position: absolute;
+    bottom: -190px;
+    right: 0;
+    transform: translateY(130px);
+    border-radius: var(--border-radius-small);
+    background-color: var(--wizard);
+    /* border: 1px solid var(--border-ash); */
+    box-shadow: var(--box-shadow-dark);
+    color: var(--dark);
+    width: 300px;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 100;
+}
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    .notification_body {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        gap: 0.5rem;
+        width: 100%;
+        border-bottom: 1px solid var(--shadow-ash);
+        padding: 20px;
+        transition: 0.2s all ease;
+        cursor: pointer;
+    }
+    .notification_body:hover {
+        background-color: var(--light-accent-transparent);
+    }
+    .notification_message {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .notification_text {
+            font-weight: 500;
+        }
+        .notification_time {
+            color: var(--border-ash);
+        }
+    }
+}
+.notification_container::-webkit-scrollbar {
+    width: 10px;
+    @media(max-width:600px){
+        display: none;
+    }
+}
+.notification_container::-webkit-scrollbar-track {
+    background: var(--border-ash);
+}
+.notification_container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+/* Profile Navigation Dropdown */
+
+.profile_container {
+    position: absolute;
+    bottom: -190px;
+    right: 30px;
+    transform: translateY(130px);
+    border-radius: var(--border-radius-small);
+    background-color: var(--wizard);
+    /* border: 1px solid var(--border-ash); */
+    box-shadow: var(--box-shadow-dark);
+    color: var(--dark);
+    width: 250px;
+    z-index: 100;
+}
+.profile_photo_details {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    .profile_photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden; */
+    }
+    .photo_icon {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        color: var(--border-ash);
+    }
+}
+.active_status {
+    position: absolute;
+    bottom: 31%;
+    right: 37%;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--wizard);
+    background-color: var(--active);
+}
+.profile_links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.profile_link_item {
+    width: 100%;
+}
+.profile_link_item a, .profile_link_item button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    transition: 0.2s all ease;
+    font-weight: 500;
+}
+.profile_link_item a:hover, .profile_link_item button:hover {
+    background-color: var(--light-accent-transparent);
+    color: var(--accent);
+}
+
+
+@media(max-width:640px) {
+    .report_nav_container, .notification_container, .profile_container {
+        display: none;
+    }
+}

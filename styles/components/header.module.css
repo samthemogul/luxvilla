@@ -12,7 +12,7 @@
     grid-template-columns: 10% 90%;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 5px 10px 20px;
     width: 100%;
     background-color: var(--wizard);
     z-index: 3;
@@ -45,6 +45,8 @@
 .report_con {
     display: flex;
     align-items: center;
+    position: relative;
+    padding: 20px 0;
     .menu_dropdown {
         font-size: 1.1rem;
         transition: 0.2s all ease;
@@ -65,6 +67,10 @@
 }
 .notification_con .header_sideicon {
     font-size: 1.6rem;
+    transition: 0.2s all ease;
+}
+.header_sideicon:hover, .header_sideicon.active_icon {
+    color: var(--accent);
 }
 .note_mark {
     position: absolute;

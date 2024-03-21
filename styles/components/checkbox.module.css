@@ -10,6 +10,19 @@
     cursor: pointer;
     box-sizing: border-box;
 }
+.circle_check_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    transition: 0.2s all ease;
+    cursor: pointer;
+    box-sizing: border-box;
+    /* pointer-events: none; */
+}
 .active {
     background-color: var(--accent);
 }

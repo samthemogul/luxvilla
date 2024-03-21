@@ -19,6 +19,10 @@
 }
 .section.active {
     height: max-content;
+    .section_icon {
+        transform: rotate(-90deg);
+    
+    }
 }
 /* .section:hover .section_icon {
     transform: rotate(-90deg);
@@ -27,7 +31,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 1.3rem;
     .note_info {
         display: flex;
         align-items: center;
@@ -58,10 +63,23 @@
 .subsection_title {
     padding: 20px 0 0 0;
     .subsection_link {
+        font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: underline;
         color: var(--dark);
         transition: 0.2s all ease;
     }
     .subsection_link:hover {
         color: var(--accent);
+    }
+}
+
+@media (max-width:640px){
+    .section_title {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    .subsection_title {
+        font-size: 1rem;
     }
 }

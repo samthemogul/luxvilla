@@ -1,11 +1,18 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext, useRef } from "react";
 import styles from "../styles/components/header.module.css";
+import tooltipStyles from "@styles/components/tooltip.module.css"
+import dropstyles from "@styles/components/dropdown.module.css"
 import Image from "next/image";
 import Link from "next/link";
 import { logoFiles } from "@constants/assets";
 import Hamburger from "./Hamburger";
+import ReportNav from "@components/DropDowns/ReportNav"
+import NotificationNav from "./DropDowns/NotificationNav";
+import ProfileNav from "./DropDowns/ProfileNav";
+import { useNotification } from "@context/NotificationContext";
+import { useProfile } from "@context/ProfileContext";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
@@ -30,16 +37,27 @@ const Header = () => {
     authHeader: false,
     dashboardHeader: false
   })
+  const { notificationOpen, setNotificationOpen } = useNotification()
+  const { profileOpen, setProfileOpen } = useProfile()
+
+  // const [notificationOpen, setNotificationOpen ] = useState(false)
   const name = "Samuel Emeka"
 
   const profilePhoto = () => {
     return photoFiles.defaultProfilePhoto.url
   }
 
+  const toggleNotification = () => {
+    setNotificationOpen(prev => !prev)
+  }
+
   const handleSearchToggle = () => {
     dispatch(sideBarActions.hide())
     dispatch(sideBarActions.toggleSidebar())
     dispatch(sideBarActions.show({ searchboxSidebar: true }))
+  }
+  const viewProfileDrop =() => {
+    setProfileOpen(prev => !prev)
   }
 
  
@@ -58,6 +76,9 @@ const Header = () => {
       dispatch(sideBarActions.show({ DashboardSideBar: true }))
     }
   }, [pathname])
+
+
+
   
   return (
     <header className={header.dashboardHeader ? styles.dashboard_header : styles.header}>
@@ -81,9 +102,11 @@ const Header = () => {
       {/* Dashboard Header */}
       {header.dashboardHeader && <div className={styles.dashboard_menus}>
         <div className={styles.dashboard_main_menu}>
-          <Link href={'/'}><p>My properties</p></Link>
-          <div className={styles.reports_option}>
-              <div className={styles.report_con}>
+          <Link href={'/dashboard/1'}><p>All properties</p></Link>
+          <Link href={'/dashboard/1/property-listings'}><p>My properties</p></Link>
+          <div className={`${styles.reports_option}`}>
+              <div className={`${styles.report_con} ${dropstyles.view_dropdown}`}>
+              <ReportNav />
                 <p>Reports</p>
                 <KeyboardArrowDownIcon className={styles.menu_dropdown} />
               </div>
@@ -91,21 +114,23 @@ const Header = () => {
         </div>
         <div className={styles.dashboard_sidemenu}>
         <Link className={styles.listing_btn} href={'/'}><button>+ New Listing</button></Link>
-        <div className={styles.notification_con}>
-          
+        <div className={`${styles.notification_con} ${tooltipStyles.tooltip_drop}`}>
+        <div className={tooltipStyles.tooltip_container}>Messages</div>
           <button>
           <div className={styles.note_mark}><p></p></div>
           <FontAwesomeIcon icon={faComment} className={styles.header_sideicon} />
           </button>
         </div>
-        <div className={styles.notification_con}>
-          
-          <button>
+        <div className={`${styles.notification_con}`}>
+          {/* <NotificationContext.Provider value={notificationOpen}><NotificationNav /></NotificationContext.Provider> */}
+          {notificationOpen && <NotificationNav />}
+          <button onClick={toggleNotification}>
           <div className={styles.note_mark}><p></p></div>
-          <FontAwesomeIcon icon={faBell} className={styles.header_sideicon} /></button>
+          <FontAwesomeIcon icon={faBell} className={notificationOpen ? `${styles.header_sideicon} ${styles.active_icon}` : styles.header_sideicon} /></button>
         </div>
         <div className={styles.profile_container}>
-          <button>
+          {profileOpen && <ProfileNav />}
+          <button onClick={viewProfileDrop}>
             <AccountCircleIcon className={styles.profile_icon} />
             {/* <Image src={profilePhoto} width={500} height={500} alt={name} /> */}
           </button>

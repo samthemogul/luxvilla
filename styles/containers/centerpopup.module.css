@@ -1,0 +1,38 @@
+.c_popup_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(11, 21, 56, 0.5);
+    z-index: 100;
+    .centerpop_content {
+        position: relative;
+        width: 50vw;
+        height: 70vh;
+        overflow: hidden;
+        background-color: var(--wizard);
+        border-radius: var(--border-radius);
+    }
+    .centerpop_close_btn {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        color: var(--dark);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s all ease;
+    }
+    .centerpop_close_btn:hover {
+        background-color: var(--shadow-ash);
+    }
+}

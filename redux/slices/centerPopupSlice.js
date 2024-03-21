@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const sidePopupSlice = createSlice({
-  name: "sidepopup",
+const centerPopupSlice = createSlice({
+  name: "centerpopup",
   initialState: { display: false, content: {
-    listingPopup: false,
+    completeProfilePopup: false,
   } },
   reducers: {
     hide(state) {
@@ -16,13 +16,13 @@ const sidePopupSlice = createSlice({
     },
     show(state, action) {
         state.display = true
-        // if(action.payload.listingPopup == true){
-        //     state.content.listingPopup = !state.content.listingPopup
-        // }
+        if(action.payload.completeProfilePopup == true){
+            state.content.completeProfilePopup = !state.content.completeProfilePopup
+        }
     },
   },
 });
 
-export const sidePopupActions = sidePopupSlice.actions;
+export const centerPopupActions = centerPopupSlice.actions;
 
-export default sidePopupSlice.reducer;
+export default centerPopupSlice.reducer;

@@ -81,6 +81,10 @@
     border-radius: var(--border-radius-small);
     width: 100%;
 }
+.security_input {
+    width: 300px;
+    padding: 12px;
+}
 .inputs:focus {
     border: 1px solid var(--dark);
 }

@@ -24,8 +24,8 @@ const SecurityForm = () => {
         <h3 className={styles.form_header}>{securityQuestion.length == 0 ? "Choose a security question" : "Confirm it is you"}</h3>
         <form onSubmit={handleSubmit} className={styles.form}>
           <p>{securityQuestion}</p>
-          <input className={styles.inputs} type="password" name='security_answer' placeholder='Enter answer' />
-          <button type='submit'>continue to account</button>
+          <input className={`${styles.inputs} ${styles.security_input}`} type="password" name='security_answer' placeholder='Enter answer' />
+          <button type='submit'>Continue to account</button>
         </form>
       </div>
     </div>
