@@ -1,7 +1,7 @@
 .main {
     display: flex;
     justify-content: center;
-    margin: 50px 0;
+    padding: 100px 0 50px 0;
 }
 .form_container {
     display: flex;
@@ -80,6 +80,10 @@
     border: 1px solid var(--border-ash);
     border-radius: var(--border-radius-small);
     width: 100%;
+}
+.security_input {
+    width: 300px;
+    padding: 12px;
 }
 .inputs:focus {
     border: 1px solid var(--dark);

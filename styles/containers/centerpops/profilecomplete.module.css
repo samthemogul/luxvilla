@@ -1,0 +1,110 @@
+.container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100%;
+    .container_illustration {
+        background-color: var(--light-accent-transparent);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .container_actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 40px;
+        background-color: var(--wizard);
+        height: 100%;
+    }
+    .profile_photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        border: 10px solid var(--accent);
+        overflow: hidden;
+        .photo_icon {
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
+            color: var(--border-ash);
+        }
+    }
+    .remark {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .illustration_link {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--accent);
+        text-decoration: underline;
+        transition: 0.2s all ease;
+    }
+    .illustration_link:hover {
+        color: var(--dark-accent);
+    }
+    .container_actions {
+        .pop_header {
+            font-family: var(--font-ibm);
+            color: var(--accent);
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .pop_tagline {
+            padding: 5px 0;
+        }
+        .pop_tagline span {
+            color: var(--accent);
+        }
+    }
+}
+
+.milestones {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.milestone_container {
+    display: grid;
+    grid-template-columns: 7% 90% 3%;
+    border-bottom: 2px solid var(--shadow-ash);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s all ease;
+    .milestone_details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .milestone_name {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    .milestone_description {
+        font-size: 0.8rem;
+        color: var(--border-ash);
+    }
+    .arrow_icon {
+        color: var(--border-ash);
+    }
+}
+.milestone_container:hover {
+    background-color: var(--light-accent-transparent);
+}
+
+.accent_close_btn {
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-curve);
+    background-color: var(--accent);
+    color: var(--wizard);
+    width: 100px;
+    bottom: 5%;
+    right: 5%;
+}

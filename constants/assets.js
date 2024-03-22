@@ -53,3 +53,9 @@ export const feautureCarouselPhotos = {
     }
 }
 
+export const dashboardCarousel = {
+    slide1: {
+        url: 'https://res.cloudinary.com/dnq4kwg8w/image/upload/v1710872261/rent_zyvupy.svg'
+    }
+}
+

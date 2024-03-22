@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--light-accent-transparent);
+    border-radius: var(--border-radius-small);
+    padding: 25px;
+}
+.profile_details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile_details h4 {
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+.profile_details h4:hover {
+    color: var(--accent);
+}
+.profile_details p {
+    font-size: 1rem;
+    color: var(--border-ash);
+}
+.profile_demo {
+    color: var(--border-ash);
+    font-size: 50px;
+}
+.cta_btn {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.cta_btn:hover {
+    color: var(--dark);
+}
+.progressbar_container {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    .progressbar {
+        display: flex;
+        justify-content: stretch;
+        overflow: hidden;
+        height: 3px;
+        background-color: var(--border-ash);
+        border-radius: var(--border-radius-small);
+        position: relative;
+        .bar {
+            background-color: var(--accent);
+            width: 70%;
+        }
+    }
+}
+.progressbar_container p {
+    font-size: 1rem;
+    font-weight: 500;
+}

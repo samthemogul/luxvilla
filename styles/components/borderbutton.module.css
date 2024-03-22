@@ -1,0 +1,21 @@
+.borderbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 30px;
+    color: var(--dark);
+    border-radius: 50px;
+    border: 1px solid var(--dark);
+    transition: 0.3s all ease;
+    background-color: transparent;
+}
+.borderbutton:hover {
+    background: var(--shadow-ash);
+}
+
+@media(max-width:640px) {
+    .borderbutton {
+        padding: 0.6rem 1.7rem;
+    }
+}

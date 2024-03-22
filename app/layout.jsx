@@ -4,7 +4,12 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import SideBar from "@components/SideBar";
+import SidePopup from "@containers/dashboard/SidePopups/SidePopup";
+import CenterPopup from "@containers/dashboard/CenterPopups/CenterPopup";
+import ScrollToTop from "@components/ScrollToTop";
 import StoreProvider from "@redux/store/StoreProvider";
+import { NotificationProvider } from "@context/NotificationContext";
+import { ProfileProvider } from "@context/ProfileContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 
@@ -14,12 +19,13 @@ config.autoAddCss = false;
 
 
 const interFont = Inter({ 
-  subsets: ["latin"], 
+  subsets: ["latin"],
+  weight: ["400", "500", '600'], 
   variable: "--font-inter",
 });
 const ibmPlexSerifFont = IBM_Plex_Serif({
   subsets: ["latin"],
-  weight: "500",
+  weight: ["400", "500", "600", "700"],
   variable: "--font-ibm",
 });
 
@@ -33,14 +39,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
       
       <body className={`${interFont.variable} ${ibmPlexSerifFont.variable}`}>
         <StoreProvider>
-          <Header />
+        <SidePopup />
+        <CenterPopup />
+        <ProfileProvider><NotificationProvider><Header /></NotificationProvider></ProfileProvider>
+          
           <SideBar />
           {children}
+          <ScrollToTop />
           <Footer />
           </StoreProvider>
       </body>
