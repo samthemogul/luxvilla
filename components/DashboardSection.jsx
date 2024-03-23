@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from "react";
 import styles from "@styles/pages/dashboard/dashboardsections.module.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
