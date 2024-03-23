@@ -1,13 +1,12 @@
-"use client"
 
-import { useEffect } from "react"
-import { useRouter } from "next/router"
-import { useParams } from "next/navigation"
 import ProductListings from '@containers/dashboard/ProductListings'
 import ProfileOptions from '@containers/dashboard/ProfileOptions'
 import SearchBox from '@containers/SearchBox'
 import DashboardSections from "@components/dashboard/DashboardSections"
 import styles from '@styles/pages/dashboard/dashboard.module.css'
+
+
+
 
 const Dashboard = () => {
  
@@ -18,10 +17,6 @@ const Dashboard = () => {
       title: "My Listings",
       subsections: ['Most recent','Favourites']
     },
-    // {
-    //   title: "Conversations",
-    //   subsections:['Messages','Calls'],
-    // },
     {
       title: "Notifications",
       subsections: ['Conversations','Alerts']
@@ -52,5 +47,13 @@ const Dashboard = () => {
     </>
   )
 }
+
+// export async function generateStaticParams() {
+//   const users = [{ userId: '1'  }, { userId: '2' }]
+//   return users.map((user) => ({
+//     userId: user.userId  
+//   }))
+// }
+
 
 export default Dashboard

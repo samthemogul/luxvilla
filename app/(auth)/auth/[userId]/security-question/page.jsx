@@ -1,14 +1,14 @@
 "use client"
 
-import React, { useEffect } from 'react'
+
 import styles from '@styles/pages/auth.module.css'
-import { useParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+
+
 
 const SecurityForm = () => {
     const router = useRouter()
     const securityQuestion = "what is my pet's name?";
-    const params = useParams()
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -31,5 +31,14 @@ const SecurityForm = () => {
     </div>
   )
 }
+
+// Remove the existing declaration of generateStaticParams
+// export async function generateStaticParams() {
+//   const users = [{ userId: '1'  }, { userId: '2' }]
+//   return users.map((user) => ({
+//     userId: user.userId  
+//   }))
+// }
+
 
 export default SecurityForm
