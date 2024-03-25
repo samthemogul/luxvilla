@@ -1,0 +1,20 @@
+# Ignore development and testing files
+node_modules
+npm-debug.log
+yarn-error.log
+.next
+.DS_Store
+*.log
+
+# Ignore Git and environment files
+.git
+.gitignore
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore OS generated files
+# ehthumbs.db
+# Thumbs.db
