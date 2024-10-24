@@ -14,6 +14,9 @@
     }
     .input_sections {
         justify-content: space-between;
+        .input_field {
+            width: 20rem;
+        }
     }
 }
 .searchbox {

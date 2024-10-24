@@ -18,7 +18,7 @@ import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutline
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux"
 import { sideBarActions } from '@redux/slices/sideBarSlice'
 import { photoFiles } from "@constants/assets";
@@ -29,6 +29,7 @@ import { faBell, faComment } from "@fortawesome/free-regular-svg-icons";
 
 const Header = () => {
   const pathname = usePathname()
+  const router = useRouter()
   const sideBarActive = useSelector((state) => state.sidebar.display)
   const dispatch = useDispatch()
 
@@ -42,6 +43,10 @@ const Header = () => {
 
   // const [notificationOpen, setNotificationOpen ] = useState(false)
   const name = "Samuel Emeka"
+
+  const viewConversations = () => {
+    router.push('/dashboard/1/conversations')
+  }
 
   const profilePhoto = () => {
     return photoFiles.defaultProfilePhoto.url
@@ -116,7 +121,7 @@ const Header = () => {
         <Link className={styles.listing_btn} href={'/'}><button>+ New Listing</button></Link>
         <div className={`${styles.notification_con} ${tooltipStyles.tooltip_drop}`}>
         <div className={tooltipStyles.tooltip_container}>Messages</div>
-          <button>
+          <button onClick={viewConversations}>
           <div className={styles.note_mark}><p></p></div>
           <FontAwesomeIcon icon={faComment} className={styles.header_sideicon} />
           </button>

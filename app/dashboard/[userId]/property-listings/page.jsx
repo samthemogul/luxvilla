@@ -10,7 +10,9 @@ import styles from '@styles/pages/dashboard/propertyListings/propertylistings.mo
 
 const PropertyPage = () => {
   return (
-    <div className={styles.properties_page_con}>Properties</div>
+    <div className={styles.properties_page_con}>
+      <h2 className={styles.header}>My properties</h2>
+    </div>
   )
 }
 

@@ -1,0 +1,129 @@
+.conversations_page_con {
+    margin: 10px 2%;
+    padding-top: 80px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 22% 50% 24%;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+/* ------------- Messaging Room ---------------- *\
+\*-----------------------------------------------*/
+
+.room_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.room_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header_text {
+        font-size: 2rem;
+        font-family: var(--font-inter);
+        font-weight: 500;
+    }
+}
+.header_navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    .room_nav_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        padding: 10px;
+        border-radius: 50%;
+        border: 2px solid var(--border-ash);
+        transition: 0.2s all ease;
+    }
+    .room_nav_btn:hover {
+        border-color: var(--accent);
+    }
+}
+
+/* Messages Search */
+.search_wrapper {
+    display: grid;
+    grid-template-columns: 80% 15%;
+    gap: 1rem;
+    align-items: center;
+}
+.search_con {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--border-ash);
+    border-radius: 50px;
+    .input {
+        width: 100%;
+        padding:10px 20px 10px 0;
+    }
+}
+.search_btn {
+    padding: 10px;
+    color: var(--accent);
+    font-weight: 100;
+}
+
+.filter_icon {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+/* Messages Container */
+.messages_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    /* background-color: var(--shadow-ash); */
+    border-radius: var(--border-radius-small);
+    height: 450px;
+}
+
+/* Messages */
+.messages {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 1rem;
+    border-radius: var(--border-radius-small);
+    background-color: var(--accent-light);
+}
+.sender_photo {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.sender_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.message_details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+}
+.name_date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--wizard);
+    .sender_name {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+    .date {
+        color: var(--shadow-ash);
+    }
+}
+.content {
+    color: var(--wizard);
+}

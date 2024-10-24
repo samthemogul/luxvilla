@@ -6,7 +6,7 @@ const ReportNav = () => {
   return (
     <div className={styles.report_nav_container}>
       <ul className={styles.nav_links}>
-          <li className={styles.nav_link_item}><Link href={'/'}>Overview</Link></li>
+          <li className={styles.nav_link_item}><Link href={'/reports'}>Overview</Link></li>
           <li className={styles.nav_link_item}><Link href={'/'}>My Reports</Link></li>
           <li className={styles.nav_link_item}><Link href={'/'}>Transactions</Link></li>
       </ul>

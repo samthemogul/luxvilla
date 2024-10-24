@@ -107,3 +107,11 @@ export const listings = [
     dateListed: date.getDate() ,
   },
 ]
+
+
+export const demoMessage = {
+  sender: "Luxvilla Representative",
+  date: "Mar 25",
+  content: "Hello! How can I assist you today?",
+  senderPhoto: "https://res.cloudinary.com/dnq4kwg8w/image/upload/v1711491318/profilePictures/icon_vg3clo.png"
+}

@@ -1,4 +1,5 @@
 /* CONFIGURATIONS */
+@import url('./fonts/neue-montreal.css');
 
 
 
@@ -7,6 +8,7 @@
   --accent: #3C6E88;
   --dark-accent: #0B1538;
   --light-accent: #6CA5C0;
+  --accent-light: #6CA5C0;
   --light-accent-transparent: rgba(108,165,192,0.12);
   --wizard: #FFFFFF;
   --dark: #000000;
@@ -47,7 +49,7 @@ html {
   font-size: var(--text-size);
 }
 body {
-    font-family: var(--font-inter);
+    font-family: "Neue Montreal Regular", var(--font-inter), Arial, sans-serif;
     background: var(--wizard);
     font-size: var(--text-size);
     max-width: 100vw;
