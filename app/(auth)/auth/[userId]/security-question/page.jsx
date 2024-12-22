@@ -33,12 +33,12 @@ const SecurityForm = () => {
 }
 
 // Remove the existing declaration of generateStaticParams
-// export async function generateStaticParams() {
-//   const users = [{ userId: '1'  }, { userId: '2' }]
-//   return users.map((user) => ({
-//     userId: user.userId  
-//   }))
-// }
+export async function generateStaticParams() {
+  const users = [{ userId: '1'  }, { userId: '2' }]
+  return users.map((user) => ({
+    userId: user.userId  
+  }))
+}
 
 
 export default SecurityForm
